@@ -16,6 +16,9 @@
 
 .kn-figure {
 	display: block;
+	&--50 {
+		width: calc(50% - 2.5px);
+	}
 	&__picture {
 		display: block;
 		width: 100%;
@@ -129,7 +132,10 @@
 		}
 	}
 	&__thumb {
-
+		&--gallery {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 	&__content {
 
