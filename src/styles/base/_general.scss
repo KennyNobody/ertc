@@ -1,12 +1,272 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+.kn-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__section {
+		margin-bottom: 100px;
+		width: 100%;
+		&--50 {
+			width: calc(50% - 45px);
+		}
+		&:last-child {
+			margin-bottom: 140px;
+		}
+	}
 }
 
-.container {
-    @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1110));
+.kn-figure {
+	display: block;
+	&__picture {
+		display: block;
+		width: 100%;
+	}
+	&__img {
+		display: block;
+		margin-bottom: 16px;
+		width: 100%;
+	}
+	&__figcaption {
+		font-size: 14px;
+		color: rgba(17, 17, 17, 0.6);
+	}
+}
+
+.kn-title {
+	font-size: 20px;
+	font-weight: 700;
+	font-family: Montserrat,'Times New Roman',serif;
+}
+
+.kn-text {
+	line-height: 1.4;
+	p {
+		margin-bottom: 1em;
+	}
+	b {
+		font-weight: bold;
+	}
+	strong {
+		display: block;
+		font-size: 35px;
+		font-weight: 600;
+		font-family: Montserrat,'Times New Roman',serif;
+	}
+}
+
+.kn-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	border-bottom: 1px solid #edecec;
+	padding-bottom: 60px;
+	&__column {
+		&--content {
+			width: 555px;
+		}
+		&--fact {
+			width: 23%;
+		}
+	}
+	&__title {
+		font-size: 70px;
+		font-weight: 300;
+		font-family: Montserrat,'Times New Roman',serif;
+		margin-bottom: 56px;
+	}
+	&__icon {
+		margin-bottom: 29px;
+	}
+}
+
+.kn-icon {
+	position: relative;
+	width: 45px;
+	height: 74px;
+	border-radius: 8px;
+	background-color: #f4f4f4;
+	display: flex;
+	align-items: center;
+	&__svg {
+		display: block;
+		width: 46px;
+		height: 46px;
+		position: relative;
+		left: -35%;
+	}
+}
+
+.kn-icon-sm {
+	position: relative;
+	width: 35px;
+	height: 55px;
+	border-radius: 8px;
+	background-color: #f4f4f4;
+	display: flex;
+	align-items: center;
+	&__svg {
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: relative;
+		left: -35%;
+	}
+}
+
+.kn-person {
+	&--row {
+		display: flex;
+		justify-content: space-between;
+		.kn-person__thumb {
+			width: calc(50% - 45px);
+		}
+		.kn-person__content {
+			width: calc(50% - 45px);
+		}
+	}
+	&--column {
+		.kn-person__thumb {
+			margin-bottom: 26px;
+		}
+	}
+	&__thumb {
+
+	}
+	&__content {
+
+	}
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+		position: relative;
+		padding-left: 34px;
+		margin-bottom: 24px;
+		font-family: Montserrat,'Times New Roman',serif;
+		&:before {
+			content: "";
+			width: 20px;
+			height: 3px;
+			border-radius: 1.5px;
+			display: block;
+			background-color: #8dc045;
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__text {
+
+	}
+}
+
+.kn-info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	&__column {
+		width: calc(50% - 45px);
+		&--grow {
+			flex-grow: 1;
+		}
+		&--345 {
+			width: 345px;
+			flex-shrink: 0;
+			margin-right: 40px;
+		}
+		&--470 {
+			width: 470px;
+			flex-shrink: 0;
+			margin-right: 80px;
+		}
+	}
+	&__title {
+		margin-bottom: 30px;
+	}
+	&__ill {
+		display: block;
+		width: 100%;
+	}
+	&__btn {
+		padding-left: 25px;
+		padding-right: 25px;
+		height: 44px;
+		border-radius: 50px;
+		border: solid 2px #e9ecf0;
+		background-color: #f2efef;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		transition: 0.3s all;
+		img {
+			width: 23px;
+			height: 19px;
+			display: block;
+			margin-right: 22px;
+		}
+		span {
+			font-weight: 600;
+			color: #777777;
+			font-family: Montserrat,'Times New Roman',serif;
+		}
+		&:hover {
+			display: inline-flex;
+			opacity: 0.6;
+		}
+	}
+}
+
+.kn-facts {
+	display: flex;
+	justify-content: space-between;
+	&__column {
+		width: calc(25% - 50px);
+	}
+}
+
+.kn-fact {
+	display: flex;
+	&__sm-icon {
+		margin-right: 18px;
+	}
+}
+
+.kn-discript {
+	margin-top: 33px;
+	position: relative;
+	padding-top: 28px;
+	font-weight: 600;
+	width: 360px;
+	font-family: Montserrat,'Times New Roman',serif;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 0px;
+		width: 67px;
+		height: 3px;
+		display: block;
+		border-radius: 1.5px;
+		background-color: #8dc045;
+	}
+}
+
+.kn-partners {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 40px;
+	&__link {
+		display: block;
+		margin-right: 47px;
+		margin-bottom: 41px;
+		transition: 0.3s all;
+		img {
+			display: block;
+			height: 86px;
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+	}
 }
