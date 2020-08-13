@@ -226,14 +226,14 @@
 		&--grow {
 			flex-grow: 1;
 		}
-		&--345 {
-			width: 345px;
-			flex-shrink: 0;
-			margin-right: 40px;
-			@include r(991) {
-				width: 100%;
-			}
-		}
+		// &--345 {
+		// 	width: 345px;
+		// 	flex-shrink: 0;
+		// 	margin-right: 40px;
+		// 	@include r(991) {
+		// 		width: 100%;
+		// 	}
+		// }
 		&--470 {
 			width: 470px;
 			flex-shrink: 0;
