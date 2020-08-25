@@ -2,15 +2,17 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 	&__section {
 		margin-bottom: 100px;
+		// text-align: justify !important;
 		width: 100%;
 		@include r(991) {
 			width: 100%;
 			margin-bottom: 20px;
 		}
 		&--50 {
-			width: calc(50% - 45px);
+			width: calc(50% - 16px);
 			@include r(991) {
 				width: 100%;
 				margin-bottom: 50px;
@@ -40,6 +42,8 @@
 	&__figcaption {
 		font-size: 14px;
 		color: rgba(17, 17, 17, 0.6);
+		line-height: 1.3;
+		font-family: Montserrat,'Times New Roman',serif;
 	}
 }
 
@@ -84,20 +88,24 @@
 		flex-wrap: wrap;
 	}
 	&__column {
+		padding-right: 16px;
 		&--content {
 			width: 555px;
 			@include r(991) {
 				width: 100%;
 				margin-bottom: 30px;
+				padding-right: 0px;
 			}
 		}
 		&--fact {
 			width: 23%;
 			@include r(991) {
 				width: 50%;
+
 			}
 			@include r(520) {
 				width: 100%;
+				padding-right: 0px;
 			}
 		}
 	}
@@ -115,6 +123,12 @@
 		margin-bottom: 29px;
 		@include r(991) {
 			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		min-height: 140px;
+		@include r(991) {
+			min-height: 0px;
 		}
 	}
 }
@@ -170,14 +184,14 @@
 			display: block;
 		}
 		.kn-person__thumb {
-			width: calc(50% - 45px);
+			width: calc(50% - 16px);
 			@include r(991) {
 				width: 100%;
 				margin-bottom: 26px;
 			}
 		}
 		.kn-person__content {
-			width: calc(50% - 45px);
+			width: calc(50% - 16px);
 			@include r(991) {
 				width: 100%;
 			}
@@ -286,6 +300,7 @@
 .kn-facts {
 	display: flex;
 	justify-content: space-between;
+    // text-align: justify;
 	@include r(991) {
 		flex-wrap: wrap;
 	}
@@ -301,6 +316,11 @@
 	display: flex;
 	&__sm-icon {
 		margin-right: 18px;
+	}
+	&__text {
+		p {
+			font-family: Montserrat,'Times New Roman',serif;
+		}
 	}
 }
 
